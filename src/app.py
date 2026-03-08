@@ -33,9 +33,10 @@ def predict_image(img):
     prediction = model.predict(img_array)[0][0]
 
     if prediction > 0.5:
-        result = "Parasitized (Malaria Detected)"
-    else:
         result = "Uninfected (Healthy Cell)"
+    else:
+       result = "Parasitized (Malaria Detected)"
+
 
     return result, float(prediction)
 
